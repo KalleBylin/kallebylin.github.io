@@ -2,8 +2,14 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2021-03-09-computational-learning-theory/2021-03-09-computational-learning-theory.html",
+      "/posts/2021-04-27-a-more-beautiful-question/2021-04-27-a-more-beautiful-question.html",
+      "/posts/2021-04-17-ab-testing-basics-spanish/2021-04-17-ab-testing-basics-spanish.html",
+      "/posts/2021-04-18-smart-business/2021-04-18-smart-business.html",
+      "/posts/2021-05-01-trustworthy-controlled-experiments/2021-05-01-trustworthy-controlled-experiments.html",
       "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
+      "/posts/welcome/index.html",
+      "/posts/2021-03-01-dl-notes/2021-03-01-dl-notes.html"
     ]
   }
 ]

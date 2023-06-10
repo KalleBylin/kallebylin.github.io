@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.361">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Kalle Bylin - Trustworthy Online Controlled Experiments</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Kalle Bylin</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">Kalle Bylin</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Trustworthy Online Controlled Experiments</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<blockquote class="blockquote">
+<p>A Practical Guide to A/B Testing</p>
+</blockquote>
+<ul>
+<li>toc: true</li>
+<li>badges: true</li>
+<li>comments: true</li>
+<li>categories: [books]</li>
+<li>image: img/controlled experiments.jpg</li>
+</ul>
+<p><img src="img/controlled experiments.jpg" alt="ab-testing" width="300"></p>
+<section id="the-book-in-3-sentences" class="level1">
+<h1>🚀 The book in 3 sentences</h1>
+<p>[Still reading the book]</p>
+</section>
+<section id="impressions" class="level1">
+<h1>🎨 Impressions</h1>
+<p>[Still reading the book]</p>
+</section>
+<section id="how-the-book-changed-me" class="level1">
+<h1>☘️ How the book changed me</h1>
+<p>[Still reading the book]</p>
+</section>
+<section id="my-top-3-quotes" class="level1">
+<h1>✍️ My top 3 quotes</h1>
+<ul>
+<li><p>“Most who have run controlled experiments in customer-facing websites and applications have experienced this humbling reality: <em>we are poor at assessing the value of ideas</em>”</p></li>
+<li><p>Twyman’s Law: “Any figure that looks interesting or different is usually wrong” - A.S.C. Ehrenberg || “The more unusual or interesting the data, the more likely they are to have been the result of an error” - Catherine Marsh and Jane Elliott</p></li>
+</ul>
+</section>
+<section id="summary-notes" class="level1">
+<h1>📒 Summary + Notes</h1>
+<section id="part-1-introductory-topics-for-everyone" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-introductory-topics-for-everyone">Part 1: Introductory topics for everyone</h2>
+<section id="introduction-and-motivation" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-and-motivation">1. Introduction and motivation</h3>
+<p>The book starts with an anecdote from Bing where an employee had proposed a new idea for how ad headlines should be displayed. The basic idea was to make the title longer by combining it with text from the first line under the title. Nobody seemed to think much of this idea and it was stashed into the backlog of experiments for six months before a software engineer decided to test the idea.</p>
+<p>This simple change ended up increasing revenue by 12%, which translated to more than $100 million dollars in the US alone annually without hurting other important metrics.</p>
+<p>A few takeaways from this event are that it’s very hard to predict the value of an idea (this one ended up being forgotten during 6 months) and small changes can have huge impacts. For this reason it is important to have infrastructure in place that makes experimenting very cheap. Bing runs more than 10.000 experiments per year and the great majority don’t have this kind of results.</p>
+<p>There are many types of <strong>controlled experiments</strong>. The main focus of this book is on a specific type of controlled experiment called an A/B test. The basic idea is to split users randomly between a control version and a variant.</p>
+<p>Another very important concept is the <strong>Overall Evaluation Criterion (OEC)</strong>. This could be a single metric or a combination of different metrics. The most important thing to remember is that the OEC has to be measurable in the short-term and believed to have a causal relationship with long-term success according to established strategic objectives.</p>
+<p>It is also <strong>important to thoughtfully set up the randomization process</strong>. This is the secret sauce of controlled experiments. The basic intuition behind this is that if there is no other factor influencing assignment apart from proper randomization, then on average we would expect both groups to be similar on all factors except the parameter we are changing. This means that any observed effect on the OEC should with very high probability be an effect of that change and nothing else.</p>
+<p>This leads us into a conversation around <strong>correlation, causality and trustworthiness</strong>. The authors present a slightly silly but true example by sharing that the number of error messages has a strong inverse correlation with churn. Should we then increase the number of error messages or intentionally add bugs to the code of Office 365? Obviously not, because error messages don’t cause lower churn. It turns out that power users tend to churn less and bump into more error messages just because they use the product more than other users.</p>
+<blockquote class="blockquote">
+<p>“We believe online controlled experiments are the best scientific way to establish causality with high probability”</p>
+</blockquote>
+<p>The authors list a series of <strong>ingredients that need to be present to be able to run a controlled experiment</strong>:</p>
+<ol type="1">
+<li><p><strong>Experimental units</strong>, like users, that can be assigned to each variant without interference where users in one group could affect the actions of the users of the other group.</p></li>
+<li><p><strong>Enough experimental units</strong>. The authors recommend to be at least in the thousands. The more units we have the more granular we can be in our experiments and discover smaller effects that are harder to detect.</p></li>
+<li><p><strong>Key metrics</strong> that are easy to understand, agreed upon and can be measured easily. If possible, the OEC should be used. A proxy metric can be used if the main metric is too difficult or slow to measure.</p></li>
+<li><p><strong>Easy changes</strong>. The harder it is to create a variant, the harder it becomes to run a controlled experiment. This is one of the reasons software has become an ideal playground for running controlled experiments.</p></li>
+</ol>
+<p>The authors also present three tenets or key beliefs that any organization needs to run online controlled experiments:</p>
+<ol type="1">
+<li><strong>The organization wants to make data-driven decisions and has formalized an OEC</strong></li>
+</ol>
+<p>Obviously, most people will say that data-driven decision-making is important for them. Still, in practice it is very common to plan, execute and declare success based on how much of the plan was accomplished while ignoring the impact on key metrics.</p>
+<p>In contrast, for data-driven decision-making to exist we need a clearly defined OEC (or set of OECs) that is measurable in the short term (1 to 2 weeks) and predictive of long-term success. This way we can quickly evaluate if what we are doing tactically and strategically is actually having a real impact on our OEC.</p>
+<ol start="2" type="1">
+<li><strong>The organization is willing to invest in the infrastructure needed to run and test controlled experiments so that results are trustworthy</strong></li>
+</ol>
+<p>In some domains, like healthcare, it can be considered unethical or illegal to run certain controlled experiments. In other domains, like hardware production, changes can be slow and expensive.</p>
+<p>In general, software is a great option because it tends to be relatively easy to randomly split users between variants, log the results and iteratively add changes to the software. Still, the organization still has to be willing to invest in setting up the necessary tests and processes so that results are trustworthy at scale.</p>
+<ol start="3" type="1">
+<li><strong>The organization recongizes that it is poor at assessing the value of ideas</strong></li>
+</ol>
+<p>Based on quotes from experts at Microsoft, Google, Netflix, Slack and others, the authors claim that most teams see experiment success rates of 10-33%, with most of them being on the lower end. In other words, we can expect 70-90% of our work to be thrown away due to poor or even negative results.</p>
+<blockquote class="blockquote">
+<p>“Most who have run controlled experiments in customer-facing websites and applications have experienced this humbling reality: <em>we are poor at assessing the value of ideas</em>”.</p>
+</blockquote>
+</section>
+<section id="running-and-analyzing-experiments" class="level3">
+<h3 class="anchored" data-anchor-id="running-and-analyzing-experiments">2. Running and analyzing experiments</h3>
+<p>This chapter focuses on the principles of designing, running and analyzing experiments.</p>
+<p>It starts with a story about a hypothetical e-commerce site where some employees have proposed the idea of adding coupon codes to the checkout process but another employee mentions that research has actually shown that coupon codes could have a negative effect (users get distracted or abandon the flow completely until they can get a code).</p>
+<p>The team decides to try out a <strong>fake door or painted door apporach</strong>. The analogy is to create a fake door or paint a door on the wall and see how many try to open it. This is a cheap way of testing an idea without having to build the whole feature first.</p>
+<p>Now the team has to choose their OEC. Revenue seems reasonable but the total sum can be misleading because, even if the process is randomized, one variant might end up with more users than the other which would skew the results. So revenue-per-user is a better choice. The authors go even deeper, clearly defining who should be counted as a user in this experiment.</p>
+<p>The final hypothesis to test would be “Adding a coupon code option to the checkout process has a negative impact on revenue-per-user for users who start the purchase process”</p>
+<p>At this point it is important to remember a few key concepts related to hypothesis testing:</p>
+<ul>
+<li><p>When analyzing the key metric it is important to capture its <strong>mean value and standard error</strong>. In other words, we usually don’t know the true value of the metric. So we use data estimate a mean value (other statistics can also be used) and the standard error tells us how variable this estimate is.</p></li>
+<li><p><strong>Sensitivity</strong> is the ability to detect statistically significant results (true positives). This concept goes hand in hand with <strong>statistical power</strong>, the probability of detecting a meaningful result when there really is one. This ability usually gets better with smaller standard errors. This makes intuitive sense. If we have a box filled with balls and almost all of them have the same color (low variablity) we can be pretty certain of the color of a ball if we pick it randomly. If we have a lot of different colors with equal distribution (high variablity) it becomes extremely difficult to guess the correct color. It is often possible to improve sensitivity by exposing more users to the experiment. We have to be careful though because are often additional costs with more users.</p></li>
+<li><p><strong>Control vs treatment samples</strong>. In this particular type of experiments we are usually not trying to estimate one value directly. We are often more interested in the difference between two values. In this case, we define a <strong>Null hypothesis</strong>, our assumption of how the world works, as the mean value of our control group being the same as the mean value of our treatment group. If we then look at the data and find this assumption to be unlikely (e.g.&nbsp;there is a very large difference between the sample means) we reject the null hypothesis and say that the difference is <strong>statistically significant</strong>.</p></li>
+<li><p>To make the previous decision, we calculate the <strong>p-value</strong> for the difference. This is the probability of observing the difference between our sample means (or a more extreme difference) assuming that the null hypothesis is true. If this probability (the p-value) is very low, it means that observing this difference is very unlikely and that’s why we go on to reject the null hypothesis.</p></li>
+<li><p>For this to work, we have to decide on a threshold before we run our experiment, usually known as the <strong>significance level</strong>. A common standard is 0.05 which means that if there really is no difference between the two samples then we will correctly conclude this 95 out of each 100 experiments on average. Seen from another perspective, we will conclude that the difference is statistically significant even if there actually was no real difference (a false positive) about 5% of the time (note that this is different to stating that there is a 5% probability of a false positive if we reject the null hypothesis, which is a common misinterpretation).</p></li>
+<li><p>Finally, there is also the question of <strong>practical significance</strong>. For a more personal example, would it be worth it to take on the challenge and costs of moving to another country with no family and friends for a 1% increase in salary keeping everything else equal (job requirements, benefits, etc.)? Probaby not, but a larger difference might actually be worth it. Here the question is, how large does the difference have to be so that it is practically meaningful?</p></li>
+</ul>
+<p>Now that we have a hypothesis, a significance boundary and a metric we also need to answer these questions to finish the <strong>design of the experiment</strong>:</p>
+<ul>
+<li>What is the randomization unit? (Users is the most common)</li>
+<li>What population of the randomization unit are we going to target? (All users vs a specific segment)</li>
+<li>How large does the population of our experiment have to be?</li>
+<li>How long do we have to run the experiment?</li>
+</ul>
+<p>There are multiple factors we can take into account for the size of the population. If the metric is binary (yes/no) or if we don’t care about very granular differences we can use smaller populations. This is also the case for larger p-value thresholds or significance levels. In other words, if we are willing to make more mistakes then we don’t need very large populations.</p>
+<p>Of course, this leads us to other kinds of questions. If the importance of the experiment is very high then we might need larger populations to increase our certainty of the results. The opposite is true if we suspect that the change could have a negative effect on users. In that case we might have to start with a smaller population and slowly increase the size to reduce risk of a negative impact.</p>
+<p>The duration of the experiment is also impacted by several factors. First of all, if we need more users we often have to allow the experiment to run for a longer period of time because not all users are exposed to the experiment simultaneously.</p>
+<p>A primacy effect might cause users to behave differently when they first see the change so we’ll also have to wait longer to see if this behavior persists or not. It is also important to keep seasonality or day-of-week effects in mind. We might have to run the experiment longer than necessary from a theoretical stanpoint just to include different dates in the experiment.</p>
+<p>There are two main components for <strong>running the experiment</strong>:</p>
+<ul>
+<li><p><strong>Infrastructure</strong> to run the experiment. This includes the possibility of randomizing, presenting different variants, etc.</p></li>
+<li><p><strong>Instrumentation</strong> to log how users are interacting with the variants and to calculate how the OEC is affected by the experiment.</p></li>
+</ul>
+<p>Before analyzing the results, it is important to also run <strong>sanity checks</strong> on our experiment.</p>
+<p>This usually includes <strong>guardrail metrics and invariants</strong>. In the first case we might want to check the sample sizes so that they match with the expected proportions. Some guardrail metrics are also expected to be invariant for the experiments. For example, latency should not change between variants unless the change was specifically designed to alter the latency.</p>
+<p>With all this in place, we can now <strong>interpret the results and make decisions</strong>. The principles we have covered exist specifically so we can trust our experiments repeatedly and thus be able to make the right decisions based on the data.</p>
+<p>For this reason, it is important to understand the business implications of our experiments so that we can modify statistical and practical significance levels before we start the experiment. This includes the costs of building the feature if the experiment is successful, cost of maintenance, effects on other important metrics, etc.</p>
+</section>
+<section id="twymans-law-and-experimentation-trustworthiness" class="level3">
+<h3 class="anchored" data-anchor-id="twymans-law-and-experimentation-trustworthiness">3. Twyman’s law and experimentation trustworthiness</h3>
+<blockquote class="blockquote">
+<p>Twyman’s Law: “Any statistic that appears interesting is almost certainly a mistake” - Paul Dickson</p>
+</blockquote>
+<p>From experience, <strong>most extreme results tend to be due to computational errors, loss or duplication of data and instrumentation errors (e.g.&nbsp;logging)</strong>. This chapter focuses on several common errors and how we can create tests to avoid falling into these mistakes.</p>
+<ul>
+<li><p><strong>Lack of statistical power</strong>. Here the mistake lies in assuming that there is no effect if the result of a hypothesis test is that a metric is not statistically significant. We simply don’t have enough data to conclude this. For example, an effect can go unnoticed if we have a very small sample size. For that reason we have to understand what effect size is practically important to us and make sure that our test has enough power to detect that effect.</p></li>
+<li><p><strong>Misinterpreting p-values</strong>. Some common ways of misunderstanding this value is to state that if p-value=0.01 then there is a 1% chance that the null hypothesis is true or that there is a 1% of our result being a false positive after rejecting the null hypothesis. Compare these statements to the definitions above to prove that these conclusions don’t follow from the given definition.</p></li>
+<li><p><strong>Peeking at p-values</strong>. This is a form of “p-value hacking” where it is common to peek at the p-values of an ongoing experiment (e.g.&nbsp;checking the p-value daily) until it is low enough to be significant and then reporting this value. Doing this consistently tends to bias the results.</p></li>
+<li><p><strong>Multiple hypothesis tests</strong>. This is a more general version of the previous concept and consists in comparing multiple versions of a test and picking the one with the lowest p-value to declare a significant result. other examples of this is to look at multiple metrics, segments, or even multiple iterations of the same experiment.</p></li>
+<li><p><strong>Confidence intervals</strong>. The authors present a few misunderstandings with respect to confidence intervals, one of which is assuming that a 95% confidence interval, for example, has a 95% probability of containing the true effect. The true value is either inside our outside the confidence interval, we already mentioned that the confidence interval and significance levels define how often we are willing to incorrectly reject the null hypothesis on average over multiple experiments.</p></li>
+</ul>
+<p>Other common issues are mentioned related to Internal validity (Violations of SUTVA, Survivorship bias, Intention-to-Treat, Sample Ratio Mismatch) and external validity (e.g.&nbsp;primacy and novelty effects)</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
