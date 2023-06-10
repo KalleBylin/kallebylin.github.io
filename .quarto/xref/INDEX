@@ -10,5 +10,23 @@
   },
   "posts/post-with-code/index.qmd": {
     "index.html": "00e6e073"
+  },
+  "posts/2021-03-01-dl-notes/2021-03-01-dl-notes.ipynb": {
+    "2021-03-01-dl-notes.html": "82221d6a"
+  },
+  "posts/2021-03-09-computational-learning-theory/2021-03-09-computational-learning-theory.ipynb": {
+    "2021-03-09-computational-learning-theory.html": "7bd2f0cc"
+  },
+  "posts/2021-04-27-a-more-beautiful-question/2021-04-27-a-more-beautiful-question.ipynb": {
+    "2021-04-27-a-more-beautiful-question.html": "fd2c8731"
+  },
+  "posts/2021-04-17-ab-testing-basics-spanish/2021-04-17-ab-testing-basics-spanish.ipynb": {
+    "2021-04-17-ab-testing-basics-spanish.html": "a8e3a668"
+  },
+  "posts/2021-04-18-smart-business/2021-04-18-smart-business.ipynb": {
+    "2021-04-18-smart-business.html": "fbb2bc59"
+  },
+  "posts/2021-05-01-trustworthy-controlled-experiments/2021-05-01-trustworthy-controlled-experiments.ipynb": {
+    "2021-05-01-trustworthy-controlled-experiments.html": "239aa11e"
   }
 }
