@@ -1,9 +1,10 @@
 /* css styles */
 
 .thumbnail-image {
-    max-height: 200px;
+    max-height: 150px;
     height: auto;
     width: auto;
+    object-fit: contain !important;
   }
 
 .title {
