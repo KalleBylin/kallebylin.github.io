@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Kalle Bylin">
+<meta name="dcterms.date" content="2021-03-09">
 
-<title>Kalle Bylin - Computational Learning Theory - Notes</title>
+<title>Kalle Bylin - Computational Learning Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -98,7 +100,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -140,14 +142,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Computational Learning Theory - Notes</h1>
-                      </div>
+      <h1 class="title">Computational Learning Theory</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">machine-learning</div>
+                <div class="quarto-category">computational-learning-theory</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Kalle Bylin </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 9, 2021</p>
+      </div>
+    </div>
     
       
     </div>
@@ -156,7 +174,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a>
+  <ul class="collapse">
+  <li><a href="#is-bias-always-a-bad-thing" id="toc-is-bias-always-a-bad-thing" class="nav-link" data-scroll-target="#is-bias-always-a-bad-thing">Is bias always a bad thing?</a></li>
+  <li><a href="#statistical-learning-theory" id="toc-statistical-learning-theory" class="nav-link" data-scroll-target="#statistical-learning-theory">Statistical Learning Theory</a></li>
+  <li><a href="#is-all-learning-equal" id="toc-is-all-learning-equal" class="nav-link" data-scroll-target="#is-all-learning-equal">Is all learning equal?</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -166,13 +197,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>A short summary of Computational Learning Theory.</p>
 </blockquote>
-<ul>
-<li>toc: true</li>
-<li>badges: true</li>
-<li>comments: true</li>
-<li>categories: [machine-learning, computational-learning-theory]</li>
-<li>image: images/chart-preview.png</li>
-</ul>
 <section id="about" class="level1">
 <h1>About</h1>
 <p>There are good and bad practices for human learning. Highlighting interesting quotes in a book usually makes us feel productive in the moment but, let’s be honest, doesn’t help much in terms of learning.</p>
@@ -242,6 +266,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>This algorithm will also be able to approximate any smooth function, even where halfspace classifiers perform poorly.</p></li>
 </ul>
 <div class="cell" data-execution_count="39">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> true_classifier(point) :</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">int</span>(point[<span class="dv">0</span>] <span class="op">&gt;=</span> <span class="dv">0</span>)</span>
@@ -281,12 +307,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(error_S, error_probability(S))</span>
 <span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> error_S <span class="op">&lt;</span> error_probability(S)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>0.0005 0.025</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="14">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>[-1, 0]</code></pre>
 </div>
