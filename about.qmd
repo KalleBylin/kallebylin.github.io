@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "Kalle Bylin"
 image: profile.jpg
 about:
   template: jolla
