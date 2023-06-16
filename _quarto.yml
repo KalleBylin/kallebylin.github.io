@@ -10,6 +10,7 @@ website:
         href: https://github.com/
       - icon: twitter
         href: https://twitter.com
+  google-analytics: "G-L4ML23KDLF"
 format:
   html:
     theme: zephyr
