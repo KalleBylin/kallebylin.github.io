@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Blog",
     "section": "",
-    "text": "The First 90 Days\n\n\n\n\n\n\n\nBooks\n\n\n\n\n\n\n\n\n\n\n\nJul 30, 2022\n\n\nKalle Bylin\n\n\n\n\n\n\n  \n\n\n\n\nPrediction Machines\n\n\n\n\n\n\n\nBooks\n\n\n\n\n\n\n\n\n\n\n\nJul 30, 2022\n\n\nKalle Bylin\n\n\n\n\n\n\n  \n\n\n\n\nThe First 90 Days\n\n\n\n\n\n\n\nBooks\n\n\n\n\n\n\n\n\n\n\n\nJul 30, 2022\n\n\nKalle Bylin\n\n\n\n\n\n\n  \n\n\n\n\nThe First 90 Days\n\n\n\n\n\n\n\nBooks\n\n\n\n\n\n\n\n\n\n\n\nJul 30, 2022\n\n\nKalle Bylin\n\n\n\n\n\n\n  \n\n\n\n\nThe First 90 Days\n\n\n\n\n\n\n\nBooks\n\n\n\n\n\n\n\n\n\n\n\nJul 30, 2022\n\n\nKalle Bylin\n\n\n\n\n\n\n  \n\n\n\n\nTrustworthy Online Controlled Experiments\n\n\n\n\n\n\n\nBooks\n\n\n\n\n\n\n\n\n\n\n\nMay 1, 2021\n\n\nKalle Bylin\n\n\n\n\n\n\n  \n\n\n\n\nA More Beautiful Question\n\n\n\n\n\n\n\nBooks\n\n\n\n\n\n\n\n\n\n\n\nApr 27, 2021\n\n\nKalle Bylin\n\n\n\n\n\n\n  \n\n\n\n\nSmart Business\n\n\n\n\n\n\n\nBooks\n\n\nLeadership\n\n\n\n\n\n\n\n\n\n\n\nApr 18, 2021\n\n\nKalle Bylin\n\n\n\n\n\n\n  \n\n\n\n\nPruebas A/B - Fundamentos\n\n\n\n\n\n\n\nData Science\n\n\nSpanish\n\n\n\n\n\n\n\n\n\n\n\nApr 17, 2021\n\n\nKalle Bylin\n\n\n\n\n\n\n  \n\n\n\n\nComputational Learning Theory - Notes\n\n\n\n\n\n\n\nMachine Learning\n\n\n\n\n\n\n\n\n\n\n\nMar 9, 2021\n\n\nKalle Bylin\n\n\n\n\n\n\n  \n\n\n\n\nDeep Learning - Notes\n\n\n\n\n\n\n\nMachine Learning\n\n\n\n\n\n\n\n\n\n\n\nMar 1, 2021\n\n\nKalle Bylin\n\n\n\n\n\n\nNo matching items"
+    "text": "A More Beautiful Question\n\n\n\n\n\n\n\nBooks\n\n\n\n\n\n\n\n\n\n\n\nApr 27, 2021\n\n\nKalle Bylin\n\n\n\n\n\n\n  \n\n\n\n\nSmart Business\n\n\n\n\n\n\n\nBooks\n\n\nLeadership\n\n\n\n\n\n\n\n\n\n\n\nApr 18, 2021\n\n\nKalle Bylin\n\n\n\n\n\n\n  \n\n\n\n\nComputational Learning Theory - Notes\n\n\n\n\n\n\n\nMachine Learning\n\n\n\n\n\n\n\n\n\n\n\nMar 9, 2021\n\n\nKalle Bylin\n\n\n\n\n\n\n  \n\n\n\n\nDeep Learning - Notes\n\n\n\n\n\n\n\nMachine Learning\n\n\n\n\n\n\n\n\n\n\n\nMar 1, 2021\n\n\nKalle Bylin\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2021-03-09-computational-learning-theory/2021-03-09-computational-learning-theory.html",
@@ -42,27 +42,6 @@
     "text": "Is all learning equal?\nIntuitively it would seem that there are different ways of learning. More formally, we can separate learning by different levels:\n\nReproductive learning\n\nIt could be argued that this first level is not learning at all.\nBasically, imagine a class where students are allowed to to take all of their notes to class. It would be possible for a student to create a table with all the information he needs without interiorizing the concepts. Once the exam starts he simply looks up the answers to his questions in the table. So he basically reproduces the information.\nThe negative side is that we need to store all of the relevant information beforehand. This can in many cases be very difficult or even impossible.\n\nRule-based learning\n\nThis level of learning can be thought of as encoding the knowledge of experts. Imagine a medical application created to automatically diagnose different types of diseases. One way to do this would be to get input from a group of doctors and create a flow-chart with nodes for every single decision that could be made.\nNow we don’t need to store the raw data or the observations with their corresponding labels as we would do in reproductive learning. Instead we keep all of these rules that can lead us to an answer.\nThe problem with this approach is that it is also very difficult or even impossible to encode every single use case and the rules are often very brittle.\n\nCreative learning\n\nHere past experience is combined in different ways to solve new problems. This can often be a much more powerful approach as we are not limited to only reproducing past observations or following rigid rules.\nThe main issue here is that it can be quite difficult to explain why a decision has been made.\n\n“If the true classifier is a halfspace, then we should be able to find a very precise separation line with only a few random examples.”\n\n1-nearest neighbor algorithm\nIn this extreme example we store all observations and their lables. Any new lable receives the label of the closest point. Two main conclusions we notice are:\n\nThis algorithm will always classify all training samples correctly.\nThis algorithm will also be able to approximate any smooth function, even where halfspace classifiers perform poorly.\n\n\n\nCode\n\ndef true_classifier(point) :\n    return int(point[0] &gt;= 0)\n\n\ndef nearest_neighbor(train_set, test_point):\n    closest_dist = float('inf')\n    closest = -1\n\n    for features, label in train_set:\n        dist = sum([(p2-p1)**2 for p1,p2 in list(zip(features, test_point))])\n        if dist &lt; closest_dist:\n            closest_dist = dist\n            closest = label\n\n    label = closest\n    return label\n\n\ndef error_probability(train_set) :\n    mistakes = 0\n    no_test_points = 2000\n    for i in range(0,no_test_points):\n        point = (2*i/no_test_points - 1,)\n        if true_classifier(point) != nearest_neighbor(train_set, point) :\n            mistakes += 1\n    return mistakes/no_test_points\n\ntrain_inputs = [-1.0, -0.1, 0.1]\nnew_input = -0.0001\n#-0.0010000000000000009\n\nS = [((x_val,), true_classifier((x_val,))) for x_val in train_inputs]\nerror_S = error_probability(S)\nnew_point = (new_input,)\nS.append( (new_point, true_classifier(new_point)) )\n\nprint(error_S, error_probability(S))\nassert error_S &lt; error_probability(S)\n\n\n0.0005 0.025\n\n\n\n\nCode\n\n\n\n[-1, 0]"
   },
   {
-    "objectID": "posts/2022-11-05-se-google/2022-11-05-se-google.html",
-    "href": "posts/2022-11-05-se-google/2022-11-05-se-google.html",
-    "title": "The First 90 Days",
-    "section": "",
-    "text": "Proven Strategies for Getting Up to Speed Faster and Smarter"
-  },
-  {
-    "objectID": "posts/2022-11-05-se-google/2022-11-05-se-google.html#part-1-introductory-topics-for-everyone",
-    "href": "posts/2022-11-05-se-google/2022-11-05-se-google.html#part-1-introductory-topics-for-everyone",
-    "title": "The First 90 Days",
-    "section": "Part 1: Introductory topics for everyone",
-    "text": "Part 1: Introductory topics for everyone"
-  },
-  {
-    "objectID": "posts/2021-09-15-prediction-machines/2021-09-15-prediction-machines.html#placeholder",
-    "href": "posts/2021-09-15-prediction-machines/2021-09-15-prediction-machines.html#placeholder",
-    "title": "Prediction Machines",
-    "section": "Placeholder",
-    "text": "Placeholder\n\n“Today, business creates value through innovation, the product of human creativity. When creativity replaces muscle power and knowledge manipulation as key factors of economic production, we will witness a creativity revolution, moving one step beyond the knowledge revolution described by management guru Peter Drucker.” - Ming Zeng\n\n\n\n\n\n\n\nNote\n\n\n\nFor more about this very interesting book by Ming Zeng, see my notes on the book “Smart Business”"
-  },
-  {
     "objectID": "posts/2021-04-27-a-more-beautiful-question/2021-04-27-a-more-beautiful-question.html",
     "href": "posts/2021-04-27-a-more-beautiful-question/2021-04-27-a-more-beautiful-question.html",
     "title": "A More Beautiful Question",
@@ -70,46 +49,11 @@
     "text": "The Power of Inquiry to Spark Breakthrough Ideas\n\n\n\n🚀 The book in 3 sentences\n\n\n🎨 Impressions\n\n\n☘️ How the book changed me\n\n\n✍️ My top 3 quotes\n\n“To encourage or even allow questioning is to cede power”\n“Forming questions helps us to organize our thinking around what we don’t know” - Stephen Quatrano, The Right Question Institute\n\n\n\n\n📒 Summary + Notes"
   },
   {
-    "objectID": "posts/2022-07-30-first-90-days/2022-07-30-first-90-days.html",
-    "href": "posts/2022-07-30-first-90-days/2022-07-30-first-90-days.html",
-    "title": "The First 90 Days",
-    "section": "",
-    "text": "Proven Strategies for Getting Up to Speed Faster and Smarter"
-  },
-  {
-    "objectID": "posts/2022-07-30-first-90-days/2022-07-30-first-90-days.html#part-1-introductory-topics-for-everyone",
-    "href": "posts/2022-07-30-first-90-days/2022-07-30-first-90-days.html#part-1-introductory-topics-for-everyone",
-    "title": "The First 90 Days",
-    "section": "Part 1: Introductory topics for everyone",
-    "text": "Part 1: Introductory topics for everyone"
-  },
-  {
-    "objectID": "posts/2021-04-17-ab-testing-basics-spanish/2021-04-17-ab-testing-basics-spanish.html",
-    "href": "posts/2021-04-17-ab-testing-basics-spanish/2021-04-17-ab-testing-basics-spanish.html",
-    "title": "Pruebas A/B - Fundamentos",
-    "section": "",
-    "text": "Un corto resumen sobre pruebas A/B\n\n\n¿Qué es una prueba A/B?\n\nEn pocas palabras, una prueba A/B es una comparación entre dos alternativas con el objetivo de descubrir cuál es mejor.\nCuando tomamos decisiones es muy fácil dejarnos llevar por nuestras opiniones. Esto no siempre es malo, pero es especialmente peligroso en empresas cuando una iniciativa es seleccionada basado principalmente en la opinión de la persona con mayor poder jerárquico en lugar del mérito propio de la iniciativa.\nA lo largo de este documento vamos a presentar también ciertas reglas importantes durante el proceso de comparación que nos permiten tener confianza en el resultado.\nVoy a enfocarme principalmente en decisiones relacionadas al desarrollo de productos digitales, pero es aplicable en muchos otros contextos.\n\nEs una herrmiante de toma de decisiones\nEl valor principal de una prueba A/B nace de la incertidumbre inherente de nuestras decisiones. Cuando no estamos seguros de qué camino tomar, una prueba A/B es una manera efectiva de probar ambas alternativas por un tiempo y dejar que los resultados nos guíen.\n\n\nEs un acelerador de procesos\nEl riesgo y la incertidumbre suelen volver lentos nuestros procesos. Cuando hay riesgo de algo potencialmente dañino para la compañía se vuelve importante crear procesos de verificación y puntos de control antes de lanzar una iniciativa. Desarrollando software es común usar una mezcla entre pruebas automatizadas y revisiones de código.\nEl problema es que por cada persona que tiene que entrar a revisar el trabajo tardas más en sacar la iniciativa a producción y esas personas pierden la posibilidad de estar trabajando en otra cosa.\nUna prueba A/B reduce el riesgo porque te permite controlar el daño potencial y te permite justificar tus decisiones. Esto se puede hacer, por ejemplo, corriendo el experimento con únicamente 5% de tus usuarios.\nAdemás, al comparar los resultados de tu experimento es más fácil darse cuenta si la iniciativa está teniendo un impacto negativo en alguna métrica clave. Sin un punto de comparación suele ser muy difícil saber si un cambio negativo en una métrica se debe a la implementación o algún otro factor.\n\n\nEmpodera personas\nEl uso constante de pruebas A/B reduce la necesidad de que una sola persona tome decisiones y permite a cualquier miembro del equipo aportar ideas. Se vuelve menos importante si alguien piensa que es una buena o mala idea, el desempeño de la idea en el campo de batalla es el juez final srgún los datos recolectados.\n\n\n\nLos experimentos controlados salvan vidas\nLas pruebas A/B son mucho más que una simple herramienta para optimizar la tasa de conversión en una página web.\nEn 1753, el médico naval escocés James Lind publicó su A Treatise of the Scurvy en el que describe una serie de experimentos controlados ofreciendo diferentes soluciones a los miembros de la tripulación. Esto le permitió llegar a la conclusión de que agregar cítricos a la dieta podría ayudar a prevenir y curar el escorbuto.\n\n\n¿Cómo funcionan las pruebas A/B?\n[Trabajo en proceso]"
-  },
-  {
-    "objectID": "posts/2022-09-30-data-intensive-applications/2022-09-30-data-intensive-applications.html",
-    "href": "posts/2022-09-30-data-intensive-applications/2022-09-30-data-intensive-applications.html",
-    "title": "The First 90 Days",
-    "section": "",
-    "text": "Proven Strategies for Getting Up to Speed Faster and Smarter"
-  },
-  {
-    "objectID": "posts/2022-09-30-data-intensive-applications/2022-09-30-data-intensive-applications.html#part-1-introductory-topics-for-everyone",
-    "href": "posts/2022-09-30-data-intensive-applications/2022-09-30-data-intensive-applications.html#part-1-introductory-topics-for-everyone",
-    "title": "The First 90 Days",
-    "section": "Part 1: Introductory topics for everyone",
-    "text": "Part 1: Introductory topics for everyone"
-  },
-  {
     "objectID": "posts/2021-04-18-smart-business/2021-04-18-smart-business.html",
     "href": "posts/2021-04-18-smart-business/2021-04-18-smart-business.html",
     "title": "Smart Business",
     "section": "",
-    "text": "Author: Ming Zeng\nPurchase on: Amazon\nLast updated: 2023-06-16"
+    "text": "Author: Ming Zeng\nPurchase on: Amazon"
   },
   {
     "objectID": "posts/2021-04-18-smart-business/2021-04-18-smart-business.html#introduction-why-you-need-to-know-about-alibaba",
@@ -138,20 +82,6 @@
     "title": "Smart Business",
     "section": "Part three - How smart businesses run: Organizational implications",
     "text": "Part three - How smart businesses run: Organizational implications\nWith a new strategic framework, it is natural for management to also evolve.\n\nSelf-tuning\n\nThe classical approach of analyze, plan, and execute is much too slow and inflexible for today’s environment. Instead of formal planning, strategy formulation is the constant and rapid iteration between vision and action.\n\nThe idea of self-tuning is borrowed from the iterative learning of machine learning algorithms. Strategic departmens shift their focus towards creating a continuous loop of experimentation and learning.\nAlibaba discovered that they did not know enough about the future to plan for the next few years. There was a real need to allow the company to adjust and adapt in real time, without traditional management getting in the way.\nComputer algorithms do not program themselves, it is humans that must decide their objective function which defines how the algorithm prioritizes different directions toward that goal.\nIn Alibaba, mission is defined as a relatively fixed reason to exist while the vision correspondes to a mutable, improvable view of the future.\nFor a company, the equivalent of an objective function is the vision. It sets the direction of the evolution the firm and the network it belongs to.\nAs time passes, the vision has to be checked against reality and updated. The objective function may need to be recalibrated, improved or changed.\nA powerful example of this experimentation mentality comes from 2011, when there was a heated internal debate on which business model to build up.\nManagement decided to split the successful business into three independent and competing units (Tmall, Taobao & Etao) and let the market pick the future winners. By 2013, Tmall was the clear market leader.\nIt was a hard decision, with high organizational and financial costs. Explaining the experiment to employees and what they were trying to learn was crucial.\n\nInstead of micromanaging the firm, management creates the organization’s architecture to run itself.\n\nThe book covers examples on how smart business applied this new strategic focus in the areas of\n\nPeople. The success of smart business depends on creative workers making mission and culture even more important.\nInfrastructure. The right infrastructure is needed to enable people instead of simply manage them. For example, in many companies and teams the cost of experimentation is prohibitive.\nMechanisms. Coordination mechanisms such as software or platforms that enable teams to collaborate with each other.\n\n\n\nThe future of smart business\nThe last chapter summarizes many of the lessons from Alibaba’s experience.\nA repeating theme in these experiences and throughout the book is the importance of feedback loops.\nFeedback is necessary for effective learning and fast feedback loops speed up learning.\nAnother important concept is ecosystem, which the author admits has been overused the last few decades. It is still a useful metaphor because strategy for platforms is interconnected instead of isolated and reactive instead of planned.\nThe speed in which the world changes is accelerating. This makes it very difficult to predict the future, and this makes it even more important to try to find a clear view of the future. This process of visioning is something anyone can do and we can then self-tune by testing our vision with actions that give us relevant feedback.\nSimilar to the knowledge revolution described by Peter Drucker, management at Alibaba see a creativity revolution in progress. Innovation and human creativity become key components of producing value while routine work, including information processing will have decresasing value.\nPlatforms succeed when they help individuals grow and succeed. For example, the web-celeb example shows how someone with limited earning power and freedom working for a large company as a normal in-house model can become a freelancer and then a brand owner through the Taobao platform."
-  },
-  {
-    "objectID": "posts/2023-06-05-power-prediction/2023-06-05-power-prediction.html",
-    "href": "posts/2023-06-05-power-prediction/2023-06-05-power-prediction.html",
-    "title": "The First 90 Days",
-    "section": "",
-    "text": "Proven Strategies for Getting Up to Speed Faster and Smarter"
-  },
-  {
-    "objectID": "posts/2023-06-05-power-prediction/2023-06-05-power-prediction.html#part-1-introductory-topics-for-everyone",
-    "href": "posts/2023-06-05-power-prediction/2023-06-05-power-prediction.html#part-1-introductory-topics-for-everyone",
-    "title": "The First 90 Days",
-    "section": "Part 1: Introductory topics for everyone",
-    "text": "Part 1: Introductory topics for everyone"
   },
   {
     "objectID": "posts/2021-03-01-dl-notes/2021-03-01-dl-notes.html",
@@ -187,12 +117,5 @@
     "title": "Deep Learning - Notes",
     "section": "What is universality?",
     "text": "What is universality?\n\nUniversality is the ability to compute any arbitrary function.\n\nIt has been proven that any function we can think of can be approximated by a neural network with at least two layers.\nMichael Nielsen clarifies two caveats related to this idea of universality: 1. Universality doesn’t mean that the neural network is guaranteed to be exact, instead we are approximating the function and the more neurons we add the closer it gets to the true function. This means that for any function f(X) and any error threshold we define we can always find a neural network with output g(x) that satisfies:\n\\[ |g(x) - f(x)| &lt; \\epsilon \\]\n\nNeural networks approximate continuous functions. Functions that are not continuous with sharp and sudden jumps won’t be approximated by a neural network as a general rule. But that doesn’t mean that we can often use a continuous approximation that is good enough for our given purposes when trying to approximate a discontinuous function."
-  },
-  {
-    "objectID": "posts/2021-05-01-trustworthy-controlled-experiments/2021-05-01-trustworthy-controlled-experiments.html",
-    "href": "posts/2021-05-01-trustworthy-controlled-experiments/2021-05-01-trustworthy-controlled-experiments.html",
-    "title": "Trustworthy Online Controlled Experiments",
-    "section": "",
-    "text": "A Practical Guide to A/B Testing\n\n\n\n🚀 The book in 3 sentences\n[Still reading the book]\n\n\n🎨 Impressions\n[Still reading the book]\n\n\n☘️ How the book changed me\n[Still reading the book]\n\n\n✍️ My top 3 quotes\n\n“Most who have run controlled experiments in customer-facing websites and applications have experienced this humbling reality: we are poor at assessing the value of ideas”\nTwyman’s Law: “Any figure that looks interesting or different is usually wrong” - A.S.C. Ehrenberg || “The more unusual or interesting the data, the more likely they are to have been the result of an error” - Catherine Marsh and Jane Elliott\n\n\n\n📒 Summary + Notes"
   }
 ]
