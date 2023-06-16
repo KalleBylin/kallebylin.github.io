@@ -2,38 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://KalleBylin.github.io/kallebylin.github.io/about.html</loc>
-    <lastmod>2023-06-11T18:14:14.433Z</lastmod>
+    <lastmod>2023-06-16T08:56:24.592Z</lastmod>
   </url>
   <url>
     <loc>https://KalleBylin.github.io/kallebylin.github.io/index.html</loc>
-    <lastmod>2023-06-11T18:14:15.023Z</lastmod>
+    <lastmod>2023-06-16T08:56:25.292Z</lastmod>
   </url>
   <url>
     <loc>https://KalleBylin.github.io/kallebylin.github.io/posts/2021-03-09-computational-learning-theory/2021-03-09-computational-learning-theory.html</loc>
-    <lastmod>2023-06-11T18:14:15.453Z</lastmod>
+    <lastmod>2023-06-16T08:56:25.832Z</lastmod>
+  </url>
+  <url>
+    <loc>https://KalleBylin.github.io/kallebylin.github.io/posts/2022-11-05-se-google/2022-11-05-se-google.html</loc>
+    <lastmod>2023-06-16T08:56:26.092Z</lastmod>
+  </url>
+  <url>
+    <loc>https://KalleBylin.github.io/kallebylin.github.io/posts/2021-09-15-prediction-machines/2021-09-15-prediction-machines.html</loc>
+    <lastmod>2023-06-16T08:56:26.342Z</lastmod>
   </url>
   <url>
     <loc>https://KalleBylin.github.io/kallebylin.github.io/posts/2021-04-27-a-more-beautiful-question/2021-04-27-a-more-beautiful-question.html</loc>
-    <lastmod>2023-06-11T18:14:15.663Z</lastmod>
+    <lastmod>2023-06-16T08:56:26.572Z</lastmod>
   </url>
   <url>
     <loc>https://KalleBylin.github.io/kallebylin.github.io/posts/2022-07-30-first-90-days/2022-07-30-first-90-days.html</loc>
-    <lastmod>2023-06-11T18:14:16.243Z</lastmod>
+    <lastmod>2023-06-16T08:56:26.822Z</lastmod>
   </url>
   <url>
     <loc>https://KalleBylin.github.io/kallebylin.github.io/posts/2021-04-17-ab-testing-basics-spanish/2021-04-17-ab-testing-basics-spanish.html</loc>
-    <lastmod>2023-06-11T18:14:16.523Z</lastmod>
+    <lastmod>2023-06-16T08:56:27.122Z</lastmod>
+  </url>
+  <url>
+    <loc>https://KalleBylin.github.io/kallebylin.github.io/posts/2022-09-30-data-intensive-applications/2022-09-30-data-intensive-applications.html</loc>
+    <lastmod>2023-06-16T08:56:27.382Z</lastmod>
   </url>
   <url>
     <loc>https://KalleBylin.github.io/kallebylin.github.io/posts/2021-04-18-smart-business/2021-04-18-smart-business.html</loc>
-    <lastmod>2023-06-11T18:14:16.723Z</lastmod>
+    <lastmod>2023-06-16T08:56:28.072Z</lastmod>
+  </url>
+  <url>
+    <loc>https://KalleBylin.github.io/kallebylin.github.io/posts/2023-06-05-power-prediction/2023-06-05-power-prediction.html</loc>
+    <lastmod>2023-06-16T08:56:28.342Z</lastmod>
   </url>
   <url>
     <loc>https://KalleBylin.github.io/kallebylin.github.io/posts/2021-03-01-dl-notes/2021-03-01-dl-notes.html</loc>
-    <lastmod>2023-06-11T18:14:17.203Z</lastmod>
+    <lastmod>2023-06-16T08:56:28.912Z</lastmod>
   </url>
   <url>
     <loc>https://KalleBylin.github.io/kallebylin.github.io/posts/2021-05-01-trustworthy-controlled-experiments/2021-05-01-trustworthy-controlled-experiments.html</loc>
-    <lastmod>2023-06-11T18:14:17.763Z</lastmod>
+    <lastmod>2023-06-16T08:56:29.152Z</lastmod>
   </url>
 </urlset>

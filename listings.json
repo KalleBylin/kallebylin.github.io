@@ -2,7 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2022-11-05-se-google/2022-11-05-se-google.html",
+      "/posts/2021-09-15-prediction-machines/2021-09-15-prediction-machines.html",
       "/posts/2022-07-30-first-90-days/2022-07-30-first-90-days.html",
+      "/posts/2022-09-30-data-intensive-applications/2022-09-30-data-intensive-applications.html",
+      "/posts/2023-06-05-power-prediction/2023-06-05-power-prediction.html",
       "/posts/2021-05-01-trustworthy-controlled-experiments/2021-05-01-trustworthy-controlled-experiments.html",
       "/posts/2021-04-27-a-more-beautiful-question/2021-04-27-a-more-beautiful-question.html",
       "/posts/2021-04-18-smart-business/2021-04-18-smart-business.html",
